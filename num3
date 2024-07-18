@@ -1,0 +1,10 @@
+from itertools import *
+kol = 0
+mas = []
+for x in product('АГНЫЦ', repeat = 7):
+    s = ''.join(x)
+    kol += 1
+    if s[-1] == 'Ц' and s.count('А') <= 2 and s.count('Ц') <= 3 and s.count('Ы') >= 1:
+        if 'АГ' not in s and 'ГА' not in s:
+            mas.append(kol)
+print(max(mas) - min(mas))
