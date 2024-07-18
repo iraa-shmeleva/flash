@@ -1,0 +1,6 @@
+ch = 164160
+otv = ''
+while ch > 0:
+    otv = str(ch%5) + otv
+    ch //= 5
+print(otv)
