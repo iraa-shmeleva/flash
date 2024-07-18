@@ -1,0 +1,10 @@
+from itertools import *
+kol = 0
+for x in product('ДОЕБПА', repeat = 5):
+    s = ''.join(x)
+    kol += 1
+    if s[0] not in 'ДБП' and s.count('Д') <= 1:
+        s = s.replace('Е', 'О').replace('А', 'О')
+        if 'ОО' not in s:
+            print(kol)
+            break
